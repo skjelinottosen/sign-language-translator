@@ -14,22 +14,62 @@ html {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 87% 3%;
+    grid-template-rows: 8% 89% 3%;
     grid-template-areas: "header" "main" "footer";
 }
 
 main {
     grid-area: main;
-    height: 87vh;
+    height: 89vh;
 
 }
 
 nav {
     grid-area: header;
-    height: 10vh;
+    height: 8vh;
     background-color: #333;
 
 }
+ 
+    ul {
+    
+    
+    }
+    li{
+        display: flex;
+        flex-wrap: wrap; 
+    }
+
+    .link-menu{
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.4rem;
+        position: fixed;
+        right:2rem;
+        margin-top: 0.5rem;
+        color: white;  
+        font-weight: 800;  
+        letter-spacing: 0.02rem;
+        text-decoration:none;
+        padding-bottom: 0.1rem;
+    }
+    .link-menu:hover{
+       color: grey;
+    }
+
+    #profile-text{ 
+        
+    }
+    
+    /*Icons rendes as i tag*/
+    i {
+        font-size: 0.8rem;
+        vertical-align: middle;
+        margin-bottom: 0.0rem;
+        margin-left: 0.0rem;
+        font-weight: 100;
+        text-align: center;
+        justify-content: space-evenly;           
+    }
 
 footer{
     grid-area: footer;
@@ -49,6 +89,8 @@ footer{
 h1{
     font-size: 1rem;
 }
+
+
 
 
 
