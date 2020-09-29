@@ -9,7 +9,7 @@ class StartPage extends React.Component{
             user:""
         }
 
-         /*Binding methods*/
+        /*Binding methods*/
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }

@@ -1,10 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import { Link, NavLink } from 'react-router-dom';
-
 import { Icon } from '@fluentui/react/lib/Icon';
-import { initializeIcons } from '@uifabric/icons';
-initializeIcons();
 
 function Header(props) {
     return (
@@ -16,7 +13,5 @@ function Header(props) {
         </nav>
     );
 }
-
-
 
 export default Header;

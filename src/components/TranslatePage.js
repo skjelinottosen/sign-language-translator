@@ -7,7 +7,6 @@ class TranslatePage extends React.Component{
             inputText:"",
             translationHistory:[]
         }
-
         /*Binding methods*/
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);

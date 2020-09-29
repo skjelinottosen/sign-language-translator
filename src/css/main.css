@@ -14,7 +14,7 @@ html {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 8.5% 88.5% 3%;
+    grid-template-rows: 8% 89% 3%;
     grid-template-areas: "header" "main" "footer";
  
 }
@@ -22,7 +22,7 @@ html {
 main {
     grid-area: main;
     width: 90%;
-    height: 88.5vh;
+    height: 89vh;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -30,7 +30,7 @@ main {
 
 nav {
     grid-area: header;
-    height: 8.5vh;
+    height: 8vh;
     background-color:#333;
 
 
@@ -209,7 +209,7 @@ input{
     
 }
 
-#btn-translate{
+#btn-translate, #btn-logout{
     width:10%;
     height: 1.35rem; 
     border-radius: 6rem;    
@@ -225,14 +225,41 @@ input{
     outline: none;
     vertical-align: middle;
 }
-    #btn-translate:hover{
+    #btn-translate:hover, #btn-logout:hover{
         background-color: gray;
         color: white;
         cursor:pointer;
         outline: none;
     }
 
+#history-h1{
+    margin-bottom: 0.0rem;
 
+}
+#history-h2{
+    font-size: 0.8rem;
+    margin-top: 0.0rem;
+    margin-bottom: 0.4rem;
+}
+#history-h3{
+    font-size: 0.6rem;
+    margin-top: 1rem;
+}
+#history-list{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.history-list-element{
+    display: block;
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+    font-weight: 600;
+    color: #9bbe5e;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
 
 
 
