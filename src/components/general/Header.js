@@ -10,9 +10,8 @@ function Header() {
     return (
         <nav className="nav">
             <ul>
-                <li><NavLink activeClassName="active-menu-item" className="link-menu" to="/"><section>My Profile <Icon iconName="Rocket" /></section></NavLink> </li>
-            </ul>
-           
+                <li><NavLink activeClassName="active-menu-item" className="link-menu" to="/"><section>Profile<Icon iconName="World" /></section></NavLink> </li>
+            </ul>      
         </nav>
     )
 }
