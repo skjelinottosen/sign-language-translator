@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from '../images/logo.png'
+import Logo from '../assets/images/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 
 class StartPage extends React.Component{
@@ -19,10 +19,8 @@ class StartPage extends React.Component{
         this.setState({ user: e.target.value });
     }
     
-
     // Stores username in session storage on click
     handleClick() {
-        alert(this.state.user);
          sessionStorage.setItem('user', this.state.user);
     }
 
