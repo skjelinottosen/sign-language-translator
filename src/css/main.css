@@ -14,51 +14,54 @@ html {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 8% 89% 3%;
+    grid-template-rows: 8.5% 88.5% 3%;
     grid-template-areas: "header" "main" "footer";
  
 }
 
 main {
     grid-area: main;
-    height: 89vh;
+    height: 88.5vh;
     text-align: center;
 }
 
 nav {
     grid-area: header;
-    height: 8vh;
+    height: 8.5vh;
     background-color:#333;
+
 
 }
  
-    ul {
-       
-    
-    
-    }
     li{
         display: flex;
-        flex-wrap: wrap; 
-     
     }
 
-    .link-menu{
-        width:10%;
-        font-size: 0.4rem;
+    #link-menu{
         position: fixed;
         right:2rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .link-section{
+        display: flex;
+        margin-left: 0.8rem;
+
+    }
+
+    .link{
+        width:10%;
+        font-size: 0.4rem;
+        display: flex;
         margin-top: 0.5rem;
         color: white;  
         font-weight: 900;  
         letter-spacing: 0.02rem;
         text-decoration:none;
-        padding-bottom: 0.1rem;
-        
-
+        padding-bottom: 0.1rem;    
     }
-    .link-menu:hover{
-       color: #9bbe5e;
+    .link:hover{
+       color: #b8e26e;
     }
 
     #profile-text{ 
@@ -68,10 +71,10 @@ nav {
     
     /*Icons rendes as i tag*/
     i {
-        font-size: 0.7rem;
+        font-size: 0.5rem;
         vertical-align: middle;
         margin-bottom: 0.0rem;
-        margin-left: 0.1rem;
+        margin-left: 0.0rem;
         font-weight: 100;
         text-align: center;
         padding: 0.1rem;
@@ -119,12 +122,6 @@ h3{
     margin-top: 0.2rem;
 }
 
-#logo{
-    margin: 0.4rem;
-    color:#ff0000;
-
-    font-size: 5rem;
-}
 
 #logo-start-page{
     margin-top: 0.9rem;
@@ -146,9 +143,10 @@ input{
     height: 1.3rem;
     border-radius: 20px;
     border: 1px solid #333;
-    color: #9bbe5e;
+    color: #333;
+    font-weight: 600;
     padding:0.2rem;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.0rem;
     font-size: 0.6rem;
     outline: none;
     text-indent: 0.6rem;
@@ -158,26 +156,34 @@ input{
         outline: none;
         border: 1px solid #9bbe5e;
         color: #333;
+        font-weight: 600;
         font-size: 0.6rem;
     }
+
+.link-button{
+    width:28%;   
+}
  
 #btn-start{
-    width:28%;
+    width:100%;
     height: 1.3rem; 
     border-radius: 6rem;    
     border: none;        
     padding: 0;
     margin-top: 0.0rem;
+    margin-left: 0.02rem;
     margin-right: 0.2rem;
     font-family: "Circular", Helvetica, Arial;
     font-weight: 600;
     color: white;
     background-color:#9bbe5e;
+    vertical-align: middle;
 }
     #btn-start:hover{
         background-color: gray;
         color: white;
         cursor:pointer;
+        outline: none;
     }
 
 

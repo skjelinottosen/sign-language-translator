@@ -1,11 +1,29 @@
 import React from "react";
 import Logo from '../images/logo.png'
-import { Icon } from '@fluentui/react/lib/Icon';
+import { Link, NavLink } from 'react-router-dom';
 
 class StartPage extends React.Component{
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            user:""
+        }
+
+         /*Binding methods*/
+        this.handleChange = this.handleChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    // Input name from user
+    handleChange(e) {
+        this.setState({ user: e.target.value });
+    }
+    
+
+    // Stores username in session storage on click
+    handleClick() {
+        alert(this.state.user);
+         sessionStorage.setItem('user', this.state.user);
     }
 
     render(){
@@ -13,20 +31,13 @@ class StartPage extends React.Component{
             <main>
                 <img id="logo-start-page" alt="Logo" src={Logo}/>
                 <h1><span id="h1-span">Sign Language</span>Translator</h1>
-              
-              
-         
-              <section id="start-page-section"> 
-                <input type="text" placeholder="Enter your name"/>
-                <button id="btn-start"type="button">Get started</button>
-              </section>
-               
-            </main>
-
-        
+                <section id="start-page-section"> 
+                <input type="text" placeholder="Enter your name"  onChange={ this.handleChange }/>
+                <NavLink activeClassName="active-menu-item" className="link-button" to="/translate"><button id="btn-start"type="button" value="Submit" onClick={this.handleClick}>Get started</button></NavLink>
+                 </section>          
+            </main>      
         );
     }
-
 }
 
-export  default StartPage;
+export default StartPage;
