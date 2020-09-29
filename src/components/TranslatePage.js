@@ -15,7 +15,6 @@ class TranslatePage extends React.Component{
     }
 
    componentDidMount() {
-
         // Gets tranlation history form session storage
         let history = sessionStorage.getItem('translationHistory')  
         
@@ -37,8 +36,8 @@ class TranslatePage extends React.Component{
     // Saves translation to session storage
     saveToSessionStorage(){
        
-        let history = this.state.history
-       
+        let history = this.state.translationHistory;
+
         // Checks if state is empty
         if(history == null){
             //Sets new state and updates session storage
@@ -49,8 +48,8 @@ class TranslatePage extends React.Component{
             // Updates the new state to inklude the previous state plus the new value
             // Callback function executes when the state is set.
             this.setState(prevState => ({
-                history: [...prevState.translationHistory, [this.state.inputText]]
-            }), () => sessionStorage.setItem('translationHistory', this.state.inputText)); 
+                translationHistory: [...prevState.translationHistory, [this.state.inputText]]
+            }), () => sessionStorage.setItem('translationHistory', this.state.translationHistory)); 
         }    
     }
 
