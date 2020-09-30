@@ -1,4 +1,5 @@
 import React from 'react'
+import withAuth from '../components/Auth/Auth'
 
 class TranslatePage extends React.Component{
     constructor(props){
@@ -76,4 +77,4 @@ class TranslatePage extends React.Component{
     }
 }
 
-export default TranslatePage;
+export default withAuth(TranslatePage);

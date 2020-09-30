@@ -252,10 +252,11 @@ input{
 }
 #history-h3{
     font-size: 0.6rem;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 #history-list{
     width: 20%;
+    margin-top: 0.3rem;
     margin-left: auto;
     margin-right: auto;
 }

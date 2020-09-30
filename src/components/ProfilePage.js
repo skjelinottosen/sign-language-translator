@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import withAuth from '../components/Auth/Auth'
 
 class ProfilePage extends React.Component{
     constructor() {
@@ -46,4 +47,4 @@ class ProfilePage extends React.Component{
     }
 }
 
-export default ProfilePage;
+export default withAuth(ProfilePage);
