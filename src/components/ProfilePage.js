@@ -1,6 +1,5 @@
 import React from "react";
-import { Icon } from '@fluentui/react/lib/Icon';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class ProfilePage extends React.Component{
     constructor() {
@@ -23,7 +22,7 @@ class ProfilePage extends React.Component{
         let history = sessionStorage.getItem('translationHistory');      
         // Checks if history is null
         if(history != null){
-            let historyArray = history.split(',');
+            let historyArray = history.split(',').reverse().slice(0, 10);
             this.setState({ translationHistory: historyArray });
         }     
     }
@@ -36,13 +35,12 @@ class ProfilePage extends React.Component{
                <h1 id="history-h1">Profile </h1> 
                <h2 id="history-h2">User {this.state.user}</h2>
                <NavLink activeClassName="active-menu-item" className="link-button" to="/"><button  id="btn-logout" type="button" value="Submit" onClick={this.handleClick}>Logout</button></NavLink>         
-               <h3 id="history-h3">Last translated words:</h3>  
+               <h3 id="history-h3">Last 10 translated words:</h3>  
                <ul id="history-list">
                 {this.state.translationHistory.map((element, index) => {
                     return <li className="history-list-element" key={index} value={element.id}>{element}</li>
                 })}
                 </ul>  
-
             </main>      
         );
     }
