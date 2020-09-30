@@ -6,10 +6,10 @@ const withAuth = Component => props =>{
     // Gets username from session storage
       let username = sessionStorage.getItem('user');
 
-    // Checks if user is null
-    if(username==null){
+    // Checks if user is not set
+    if(username == null){
         // Redirects to start page for sign in
-        return <Redirect to="/" />
+        return <Redirect to="/startpage" />
     }
     else{
         // Continues to the requested component
