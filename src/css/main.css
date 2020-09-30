@@ -21,7 +21,7 @@ html {
 
 main {
     grid-area: main;
-    width: 90%;
+    width: 100%;
     height: 89vh;
     margin-left: auto;
     margin-right: auto;
@@ -197,9 +197,14 @@ input{
   
 }
 #display-signs-section{
-    width:70%;
-    height: 100%;
-    margin-top: 0.2rem;
+    width:100%;
+    height: 64vh;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    overflow: scroll;
 }
 #translate-text-input{
     width: 40%;
@@ -207,6 +212,10 @@ input{
     margin-right: auto;
     vertical-align: middle;
     
+}
+
+.tranlate-sign-image{
+    width: 20%;
 }
 
 #btn-translate, #btn-logout{

@@ -5,6 +5,7 @@ class TranslatePage extends React.Component{
         super(props);
         this.state = {
             inputText:"",
+            letters:[],
             translationHistory:[]
         }
         /*Binding methods*/
@@ -29,14 +30,13 @@ class TranslatePage extends React.Component{
     }
     // Translate event on click
     handleClick() {   
-        this.saveToSessionStorage()
+        this.saveToSessionStorage()    
     }
     
     // Saves translation to session storage
     saveToSessionStorage(){
-       
-        let history = this.state.translationHistory;
 
+        let history = this.state.translationHistory;
         // Checks if state is empty
         if(history == null){
             //Sets new state and updates session storage
@@ -48,13 +48,11 @@ class TranslatePage extends React.Component{
             // Callback function executes when the state is set.
             this.setState(prevState => ({
                 translationHistory: [...prevState.translationHistory, [this.state.inputText]]
-            }), () => sessionStorage.setItem('translationHistory', this.state.translationHistory)); 
+            }), () => this.setState(prevState => ({
+                letters: [ this.state.inputText.split("")]
+            }), () => sessionStorage.setItem('translationHistory', this.state.translationHistory)));      
         }    
     }
-
-    splitString(text){     
-    }
-    
 
     render(){
         return(
@@ -64,7 +62,13 @@ class TranslatePage extends React.Component{
                     <input id="translate-text-input" type="text" placeholder="Enter text"  onChange={ this.handleChange }/>
                     <button id="btn-translate"type="button" value="Submit" onClick={this.handleClick}>Translate</button>
                     <section id="display-signs-section">
-                    <p>{this.state.translationHistory}</p>
+                    {this.state.letters.map((words) => {
+                    return  words.map( letters => {
+                        if(letters!==" "){
+                            return <img className="tranlate-sign-image" src={process.env.PUBLIC_URL+"/individial_signs/"+letters+'.png'}  alt={this.state.inputText} />
+                            }
+                        })
+                    })}
                     </section>
                 </section>
             </main>
