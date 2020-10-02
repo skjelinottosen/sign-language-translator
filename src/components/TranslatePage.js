@@ -1,5 +1,5 @@
 import React from 'react'
-import withAuth from '../components/Auth/Auth'
+import withAuth from '../components/auth/Auth'
 
 class TranslatePage extends React.Component{
     constructor(props){
