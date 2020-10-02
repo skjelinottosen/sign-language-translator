@@ -20,9 +20,9 @@ function Header() {
                 </ul>      
             </nav>
         );
-     }
-     // Renders header without links
-     else{
+    }
+    // Renders header without links
+    else{
         return (
             <nav className="nav">
                 <ul id="link-menu">
