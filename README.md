@@ -1,4 +1,4 @@
-## Sign Language Translator
+# Sign Language Translator
 Sign Language Translator is an application that translates English words into American sign language.
 
 The service require login for use.
@@ -6,10 +6,18 @@ The service require login for use.
 The user can enter words and press the translate button to have the words translated into pictures of each individual sign.
 The user also has access to a profile page that allows the user to see a history of the last 10 translated words. The user can also log out of service from this page.
 
-
-
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Start Screen
+![](screenshots/startScreenView.PNG)
+
+### Translate 
+![](screenshots/translateView.PNG)
+
+### Profile
+![](screenshots/profileView.PNG)
+
+
 
 ## Available Scripts
 
